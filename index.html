@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color:black;
+}
+
+form {
+    background-color: chocolate;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+}
+
+div {
+    margin-bottom: 15px;
+}
+
+label {
+    /* display: block; */
+    margin-bottom: 5px;
+}
+
+input, textarea {
+    width: 500px;
+    padding: 8px;
+    margin-bottom: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    padding: 10px 15px;
+    background-color: #28a745;
+    color: rgb(214, 33, 33);
+    border: none;
+    border-radius: 5px;
+    /* cursor: pointer; */
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+.error-message {
+    color: rgb(14, 31, 7);
+    font-size: 12px;
+    display: block;
+}
+
+#thankYouMessage {
+    margin-top: 20px;
+    font-size: 18px;
+    color: rgb(228, 32, 228);
+}
+    </style>
+</head>
+<body>
+
+    <h1 style="color:red;text-align: center;">Simple Form</h1>
+
+    <form id="contactForm">
+        <div>
+            
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name">
+            <span id="nameError" class="error-message"></span>
+    
+        </div>
+
+        <div>
+            <label for="email">Email:</label>
+            <input type="text" id="email" name="email">
+            <span id="emailError" class="error-message"></span>
+        </div>
+
+        <div>
+            <label for="message">Message:</label>
+            <textarea id="message" name="message"></textarea>
+            <span id="messageError" class="error-message"></span>
+        </div>
+
+        <button type="submit">Submit</button>
+    </form>
+
+    <div id="thankYouMessage"></div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
